@@ -19,6 +19,25 @@
     .profile-heading{font:600 36px 'Playfair Display',serif;margin:12px 0 22px}.profile-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;align-items:flex-start;gap:26px;margin-bottom:20px}.profile-avatar{width:116px;height:116px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:#e8d6cf;color:var(--wine);font:600 46px 'Playfair Display',serif;overflow:hidden}.profile-avatar img,.avatar img{width:100%;height:100%;object-fit:cover}.profile-fields{flex:1;min-width:0}.profile-fields h3{font:600 25px 'Playfair Display',serif;margin:0}.profile-fields>p{color:var(--muted);font-size:13px}.profile-fields .form{margin-bottom:20px}#profileView[hidden],#feedView[hidden]{display:none!important}@media(max-width:700px){.profile-card{flex-direction:column;padding:20px}.profile-avatar{width:90px;height:90px}.top-actions{gap:5px}}
     @media(max-width:1040px){.shell{grid-template-columns:170px minmax(0,1fr)}.right{display:none}.top nav{gap:10px}}
     @media(max-width:700px){.top{min-height:68px;padding:10px 18px}.brand b{font-size:29px}.brand small{display:none}.top nav{display:none}.shell{display:block;padding:22px 15px}.left{display:none}.hero{padding:29px 26px}.hero h1{font-size:38px}.post{padding:19px}.mobile-nav{display:flex;overflow-x:auto;gap:8px;margin-bottom:20px}.mobile-nav button{flex-shrink:0;border:1px solid var(--line);background:#fff;border-radius:20px;padding:10px 15px;color:var(--wine)}.section-head h2{font-size:24px}.form .row{grid-template-columns:1fr}.top-actions .pill,.top-actions .outline{padding:9px 12px;font-size:12px}}
+  /* TEBy's: mantém as fotos de perfil redondas */
+.avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Impede que a foto ultrapasse o avatar */
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
   </style>
   <!-- Biblioteca oficial do Supabase para login e banco de dados -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
